@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions and Transforms</title>
+    <style>
+        .container{
+            width: 900px;
+            height: 500px;
+            border: 1px solid rgba(255, 0, 0, 0.568);
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px;
+            margin:  50px;
+            background-color: black;
+        }
+        button{
+            width: 200px;
+            height: 8vh;
+            margin: 10px 10px;
+            border: 2px solid blue;
+            border-radius: 20px;
+            background-color: aqua;
+            color: white;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        img{
+            width: 300px;
+            border: 10px solid pink;
+            border-radius: 50%;
+            background-color: white;
+            position: relative;
+            left: 290px;
+            top: 100px;
+            transition: all 5s;
+        }
+        .a:hover{
+            background-color: red;
+        }
+        .a:hover ~ img{
+            transform: translate(50px,50px);
+        }
+        .b:hover{
+            background-color: red;
+        }
+        .b:hover ~ img{
+            transform: rotate(1000deg);
+        }
+        .c:hover{
+            background-color: red;
+        }
+        .c:hover ~ img{
+            transform: scale(2);
+        }
+        .d:hover{
+            background-color: red;
+        }
+        .d:hover ~ img{
+            transform:skew(200deg)        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <button class="a">Hover to Translate</button>
+            <button class="b">Hover to Rotate</button>
+            <button class="c">Hover to Scale</button>
+            <button class="d">Hover to Skew</button>
+            <img src="./star.jpg" alt="">
+    </div>
+</body>
+</html>
